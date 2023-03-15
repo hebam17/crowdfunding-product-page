@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+@import url("style");
 html,
 body {
   margin: 0;
@@ -7,8 +8,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  background: blue;
+  font-family: "Commissioner", sans-serif;
+  transition: all 0.3s;
 }/*# sourceMappingURL=index.css.map */

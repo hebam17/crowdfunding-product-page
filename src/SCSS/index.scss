@@ -11,6 +11,7 @@ $dark-gray: hsl(0, 0%, 48%);
 
 // TYPOGRAPHY
 $font-size: 16px;
+$font-size-small: 14px;
 $font-family: "Commissioner", sans-serif;
 $font-weight1: 400;
 $font-weight2: 500;
@@ -25,8 +26,8 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: $font-family;
+  transition: all 0.3s;
 }
 
-body {
-  background: blue;
-}
+@import url("style");
