@@ -1,5 +1,3 @@
-@import "index";
-
 // ////// header and navbar
 #head {
   width: 100%;
@@ -8,7 +6,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   @media screen and (max-width: 768px) and (min-width: 481px) {
     height: 45vh;
   }
@@ -51,7 +48,7 @@ nav {
     }
 
     @media screen and (max-width: 480px) {
-      font-size: $font-size * 1.3;
+      font-size: $font-size * 1.5;
     }
 
     &:hover {
@@ -172,7 +169,7 @@ nav {
 // header and navbar end
 // MAIN
 main {
-  width: 50%;
+  width: 55%;
   margin: auto;
 
   @media screen and (max-width: 1200px) and (min-width: 1025px) {
@@ -199,6 +196,7 @@ main {
   margin-top: -7rem;
   background: white;
   border-radius: 10px;
+  border: solid 1px $pale;
 
   @media screen and (max-width: 1024px) and (min-width: 769px) {
     padding: 3rem 2rem 2.5rem;
@@ -245,7 +243,7 @@ main {
   }
 
   h1 {
-    font-size: $font-size * 1.6;
+    font-size: $font-size * 1.8;
     font-weight: $font-weight3;
     color: $black;
 
@@ -318,10 +316,11 @@ main {
 
       &:hover {
         background: $dark-cyan;
+        cursor: pointer;
       }
     }
 
-    div.cta-bookmark {
+    .cta-bookmark {
       position: relative;
       padding: 1.4rem 2rem 1.5rem 3.6rem;
       border-radius: 50px;
@@ -396,6 +395,20 @@ main {
         &:active {
           outline: none;
         }
+      }
+    }
+
+    // WHEN THE BOOKMARK BUTTON IS ACTIVE
+    .active {
+      color: $dark-cyan;
+      background: rgba(244, 248, 249, 255);
+      cursor: pointer;
+
+      button {
+        background-image: url("../../public/images/icon-bookmark2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
     }
 

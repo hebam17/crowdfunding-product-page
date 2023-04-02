@@ -1,21 +1,10 @@
 // IMPORTS
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
 
-// VARIABLES
-
-// COLORS
-$moderate-cyan: hsl(176, 50%, 47%);
-$dark-cyan: hsl(176, 72%, 28%);
-$black: hsl(0, 0%, 0%);
-$dark-gray: hsl(0, 0%, 48%);
-
-// TYPOGRAPHY
-$font-size: 16px;
-$font-size-small: 14px;
-$font-family: "Commissioner", sans-serif;
-$font-weight1: 400;
-$font-weight2: 500;
-$font-weight3: 700;
+@import "variables";
+@import "cta";
+@import "info";
+@import "about";
 
 // GENERAL STYLES
 html,
@@ -29,5 +18,3 @@ body {
   font-family: $font-family;
   transition: all 0.3s;
 }
-
-@import url("style");
