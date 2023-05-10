@@ -1,6 +1,6 @@
 import { ADD_BACKS } from "./backTypes";
 
-export const usersFetchingSucced = (money) => {
+export const addingBacks = (money) => {
   return {
     type: ADD_BACKS,
     payload: money,

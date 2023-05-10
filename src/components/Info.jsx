@@ -1,27 +1,18 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { backContext } from "../context/backs/Back";
 
 export default function Info() {
-  const { backState, backDispatch } = useContext(backContext);
-  let percent;
+  const { backState } = useContext(backContext);
 
   const splitNumber = (num) => {
-    console.log(num.toString().slice(0, 2));
     return `${num.toString().slice(0, -3)},${num.toString().slice(-3)}`;
   };
-
-  useEffect(() => {
-    console.log(backState);
-    percent = Math.round(
-      (backState.backedMony / backState.backedExpected) * 100
-    );
-  }, []);
 
   return (
     <div id="info">
       <div className="info-data">
         <div className="info-backed">
-          <div className="number">${splitNumber(backState.backedMony)}</div>
+          <div className="number">${splitNumber(backState.backedMoney)}</div>
           <div className="text">
             of ${splitNumber(backState.backedExpected)} backed
           </div>

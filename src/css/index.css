@@ -284,38 +284,6 @@ main {
     margin-top: 1.5rem;
   }
 }
-.cta .cta-btns button.cta-back-btn {
-  border: none;
-  padding: 0.5rem 3rem;
-  background: hsl(176, 50%, 47%);
-  color: white;
-  font-size: 16px;
-  border-radius: 50px;
-  text-align: center;
-  word-spacing: 1px;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) and (min-width: 481px) {
-  .cta .cta-btns button.cta-back-btn {
-    font-size: 15.4px;
-    padding: 0.4rem 1.5rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .cta .cta-btns button.cta-back-btn {
-    font-size: 14px;
-    padding: 0.4rem 2.3rem;
-    white-space: nowrap;
-  }
-}
-.cta .cta-btns button.cta-back-btn:active {
-  outline: none;
-}
-.cta .cta-btns button.cta-back-btn:hover {
-  background: hsl(176, 72%, 28%);
-  cursor: pointer;
-}
 .cta .cta-btns .cta-bookmark {
   position: relative;
   padding: 1.4rem 2rem 1.5rem 3.6rem;
@@ -415,6 +383,39 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+button.cta-back-btn {
+  border: none;
+  padding: 0.5rem 3rem;
+  background: hsl(176, 50%, 47%);
+  color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  text-align: center;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  button.cta-back-btn {
+    font-size: 15.4px;
+    padding: 0.4rem 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  button.cta-back-btn {
+    font-size: 14px;
+    padding: 0.4rem 2.3rem;
+    white-space: nowrap;
+  }
+}
+button.cta-back-btn:active {
+  outline: none;
+}
+button.cta-back-btn:hover {
+  background: hsl(176, 72%, 28%);
+  cursor: pointer;
 }
 
 #info {
@@ -582,6 +583,7 @@ button:focus {
   padding: 2rem;
   border: solid 1px #f1eeee;
   margin-bottom: 1.5rem;
+  border-radius: 5px;
 }
 
 .reward-head {
@@ -596,42 +598,44 @@ button:focus {
     align-items: flex-start;
   }
 }
-.reward-head .header3 {
-  font-size: 20.8px;
+
+.header3 {
+  font-size: 19.2px;
   font-weight: 700;
   color: hsl(0, 0%, 0%);
 }
 @media screen and (max-width: 1200px) and (min-width: 1025px) {
-  .reward-head .header3 {
+  .header3 {
     font-size: 17.6px;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 769px) {
-  .reward-head .header3 {
+  .header3 {
     font-size: 17.6px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 481px) {
-  .reward-head .header3 {
+  .header3 {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 550px) {
-  .reward-head .header3 {
+  .header3 {
     margin-bottom: 0.5rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .reward-head .header3 {
+  .header3 {
     font-size: 15px;
   }
 }
-.reward-head .pledge {
+
+.pledge {
   font-weight: 500;
   color: hsl(176, 50%, 47%);
 }
 @media screen and (max-width: 550px) {
-  .reward-head .pledge {
+  .pledge {
     margin: 0;
   }
 }
@@ -708,6 +712,394 @@ button:focus {
 }
 .out-of-stock .reward-select {
   background: #8a8989;
+}
+
+.backmodel-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  bottom: 0;
+  overflow-y: auto;
+}
+.backmodel-out .backmodel-container {
+  width: 55%;
+  background: white;
+  padding: 2rem 3rem;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 5px;
+  /* width */
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  .backmodel-out .backmodel-container {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .backmodel-out .backmodel-container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .backmodel-out .backmodel-container {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .backmodel-out .backmodel-container {
+    width: 90%;
+  }
+}
+.backmodel-out .backmodel-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+#close-backmodel {
+  float: right;
+}
+
+.backmodel-container .reward,
+.backmodel-container .out-of-stock {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.backmodel-container .reward-active {
+  border: solid 1px hsl(176, 72%, 28%);
+}
+
+.check-input {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin-bottom: 1.2rem;
+}
+@media screen and (max-width: 600px) {
+  .check-input {
+    margin-bottom: 2rem;
+  }
+}
+.check-input input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check-input .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid 1px #d1cece;
+}
+.check-input:hover input ~ .checkmark {
+  background-color: #f1eeee;
+}
+.check-input input:checked ~ .checkmark {
+  background-color: white;
+}
+.check-input .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-input .checkmark:after {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: hsl(176, 50%, 47%);
+}
+.check-input input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.backmodel-wrapper {
+  padding: 1.5rem 1rem;
+}
+@media screen and (max-width: 768px) {
+  .backmodel-wrapper {
+    padding: 2rem;
+  }
+}
+
+.backmodel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backmodel-header .backmodel-header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3rem;
+  flex: 1;
+}
+.backmodel-header .backmodel-header-right .backmodel-titles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .backmodel-header .backmodel-header-right .backmodel-titles {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .backmodel-header .backmodel-header-right .backmodel-titles .header3 {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+.backmodel-header .backmodel-header-right .backmodel-titles .pledge {
+  margin-left: 1rem;
+  color: hsl(176, 72%, 28%);
+  font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+  .backmodel-header .backmodel-header-right .backmodel-titles .pledge {
+    margin: 1rem 0 0 0;
+  }
+}
+
+.backmodel-left {
+  display: flex;
+  justify-content: flex-end;
+}
+.backmodel-left .backmodel-left-num {
+  font-weight: 700;
+}
+.backmodel-left .backmodel-left-num {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .left-before {
+    display: none;
+  }
+}
+.backmodel-text {
+  margin-left: 3rem;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .backmodel-text {
+    margin: 1.2rem 0 0 0;
+  }
+}
+
+.left-after {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .left-after {
+    display: flex;
+  }
+}
+
+.pay-pledge {
+  width: 100%;
+  border-top: solid 2px #f1eeee;
+}
+.pay-pledge .pay-wrapper {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .pay-pledge .pay-wrapper {
+    padding: 2rem;
+    flex-direction: column;
+  }
+}
+.pay-pledge .pay-text {
+  font-size: 16px;
+  color: hsl(0, 0%, 48%);
+}
+.pay-pledge .pay-action {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .pay-pledge .pay-action {
+    margin-top: 1.8rem;
+  }
+}
+.pay-pledge .pay-action .pay-input {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50px;
+  margin-right: 1.2rem;
+}
+.pay-pledge .pay-action .pay-input input {
+  padding: 1rem 1rem 1rem 2.2rem;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: solid 3px #f1eeee;
+  width: 7rem;
+}
+.pay-pledge .pay-action .pay-input input:focus, .pay-pledge .pay-action .pay-input input:hover {
+  outline: hsl(176, 72%, 28%);
+}
+.pay-pledge .pay-action .pay-input span {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 1.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(0, 0%, 48%);
+  transform: translate(-50%, -50%);
+}
+.pay-pledge .pay-action .cta-back-btn {
+  padding: 1rem 1.5rem;
+}
+.pay-pledge .pay-action .cta-back-btn:hover {
+  cursor: pointer;
+  background: hsl(176, 72%, 28%);
+}
+
+.thank-model .thank-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2.5rem;
+  color: white;
+  border-radius: 10px;
+  background: white;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 40%;
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  .thank-model .thank-container {
+    width: 50%;
+    padding: 3.3rem 2.2rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .thank-model .thank-container {
+    width: 60%;
+    padding: 3.1rem 2rem;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .thank-model .thank-container {
+    width: 75%;
+    padding: 3rem 1.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .thank-model .thank-container {
+    width: 85%;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(176, 50%, 47%);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  .header {
+    padding: 1.3rem 1.8rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.4rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .header {
+    padding: 1.1rem 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .header {
+    padding: 1rem 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 1rem 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
+
+.body {
+  text-align: center;
+}
+.body .header1 {
+  color: hsl(0, 0%, 0%);
+}
+.body .thank-text {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .body .thank-text {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .thank-text {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+}
+.body .cta-back-btn {
+  padding: 1.5rem 3rem;
+}
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .body .cta-back-btn {
+    padding: 1.2rem 2.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .cta-back-btn {
+    padding: 1.1rem 2.3rem;
+  }
 }
 
 html,

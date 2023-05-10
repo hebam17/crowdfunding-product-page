@@ -3,9 +3,9 @@ import { useEffect } from "react";
 export default function Reward({ reward }) {
   const { title, pledge, text, left } = reward;
 
-  useEffect(() => {
-    console.log(left);
-  }, []);
+  // useEffect(() => {
+  //   console.log(left);
+  // }, []);
   return (
     <div className={!(left === 0) ? "reward" : "out-of-stock"}>
       <div className="reward-head">

@@ -1,0 +1,286 @@
+//MODEL
+.backmodel-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  bottom: 0;
+  overflow-y: auto;
+
+  .backmodel-container {
+    width: 55%;
+    background: white;
+    padding: 2rem 3rem;
+    height: auto;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-radius: 5px;
+
+    @media screen and (max-width: 1200px) and (min-width: 1025px) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+      width: 75%;
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      width: 85%;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 90%;
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+}
+
+#close-backmodel {
+  float: right;
+}
+
+.backmodel-container .reward,
+.backmodel-container .out-of-stock {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.backmodel-container .reward-active {
+  border: solid 1px $dark-cyan;
+}
+
+// THE INPUT
+.check-input {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 1.2rem;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px #d1cece;
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: $pale;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: white;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark:after {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $moderate-cyan;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+}
+
+.backmodel-wrapper {
+  padding: 1.5rem 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.backmodel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .backmodel-header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3rem;
+    flex: 1;
+
+    .backmodel-titles {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .header3 {
+          margin: 0;
+          white-space: nowrap;
+        }
+      }
+
+      .pledge {
+        margin-left: 1rem;
+        color: $dark-cyan;
+        font-weight: $font-weight3;
+        font-size: $font-size;
+
+        @media screen and (max-width: 600px) {
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.backmodel-left {
+  display: flex;
+  justify-content: flex-end;
+
+  .backmodel-left-num {
+    font-weight: $font-weight3;
+  }
+
+  .backmodel-left-num {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left-before {
+    display: none;
+  }
+}
+
+.backmodel-text {
+  margin-left: 3rem;
+  padding: 0;
+
+  @media screen and (max-width: 768px) {
+    margin: 1.2rem 0 0 0;
+  }
+}
+
+.left-after {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+
+// the pay part
+.pay-pledge {
+  width: 100%;
+  border-top: solid 2px $pale;
+
+  .pay-wrapper {
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      padding: 2rem;
+      flex-direction: column;
+    }
+  }
+
+  .pay-text {
+    font-size: $font-size;
+    color: $dark-gray;
+  }
+
+  .pay-action {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 1.8rem;
+    }
+
+    .pay-input {
+      position: relative;
+      width: fit-content;
+      border-radius: 50px;
+      margin-right: 1.2rem;
+
+      input {
+        padding: 1rem 1rem 1rem 2.2rem;
+        font-size: $font-size;
+        font-weight: $font-weight3;
+        border-radius: 50px;
+        border: solid 3px $pale;
+        width: 7rem;
+
+        &:focus,
+        &:hover {
+          outline: $dark-cyan;
+        }
+      }
+
+      span {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 1.5rem;
+        font-size: $font-size;
+        font-weight: $font-weight3;
+        color: $dark-gray;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .cta-back-btn {
+      padding: 1rem 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        background: $dark-cyan;
+      }
+    }
+  }
+}

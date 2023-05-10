@@ -4,7 +4,7 @@ import { ADD_BACKS } from "./backTypes";
 export const backContext = createContext(null);
 
 const initialState = {
-  backedMony: 89914,
+  backedMoney: 89914,
   backedExpected: 100000,
   backers: "5007",
   daysLeft: 56,
@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
     case ADD_BACKS:
       return {
         ...state,
-        backedMony: state.backedMony + action.payload,
+        backedMoney: state.backedMoney + action.payload,
         backers: state.backers + 1,
       };
 

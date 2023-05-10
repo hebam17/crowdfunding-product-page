@@ -1,0 +1,107 @@
+.thank-model .thank-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2.5rem;
+  color: white;
+  border-radius: 10px;
+  background: white;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 40%;
+
+  @media screen and (max-width: 1200px) and (min-width: 1025px) {
+    width: 50%;
+    padding: 3.3rem 2.2rem;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    width: 60%;
+    padding: 3.1rem 2rem;
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    width: 75%;
+    padding: 3rem 1.8rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 85%;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $moderate-cyan;
+  width: fit-content;
+  border-radius: 50%;
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+  font-weight: $font-weight3;
+
+  @media screen and (max-width: 1200px) and (min-width: 1025px) {
+    padding: 1.3rem 1.8rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.4rem;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    padding: 1.1rem 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    padding: 1rem 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
+
+.body {
+  text-align: center;
+
+  .header1 {
+    color: $black;
+  }
+
+  .thank-text {
+    font-size: 1.2rem;
+    color: $dark-gray;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 1200px) and (min-width: 769px) {
+      font-size: $font-size;
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: $font-size;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .cta-back-btn {
+    padding: 1.5rem 3rem;
+
+    @media screen and (max-width: 1200px) and (min-width: 769px) {
+      padding: 1.2rem 2.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 1.1rem 2.3rem;
+    }
+  }
+}

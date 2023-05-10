@@ -12,11 +12,6 @@ export default function Nav() {
     });
   }, []);
 
-  useEffect(() => {
-    // console.log(mobile);
-    console.log(openMenu);
-  }, [openMenu]);
-
   return (
     <nav>
       <div id="logo">crowdfund</div>
