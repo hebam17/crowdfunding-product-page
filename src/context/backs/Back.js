@@ -6,7 +6,7 @@ export const backContext = createContext(null);
 const initialState = {
   backedMoney: 89914,
   backedExpected: 100000,
-  backers: "5007",
+  backers: 5007,
   daysLeft: 56,
 };
 
