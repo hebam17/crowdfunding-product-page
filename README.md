@@ -1,5 +1,5 @@
 # Crowdfunding product page
 
-- As visitors make pledges, your goal is to keep track of the changes.
+- As visitors make pledges, the goal is to keep track of the changes.
 
 ![The product page](./src/design/desktop-design.jpg)
